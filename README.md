@@ -1,15 +1,9 @@
-# CSE 151B Competition — Starter Code
+# CSE 151B Competition
 
-Open **`starter_code_cse151b_comp.ipynb`** to get started.
+GPU type used was A30 and the total generation time is 1-1.5 minutes per question. 
 
-The notebook covers environment setup, inference with Qwen3-4B-Thinking (INT8), and scoring against the public dataset.
+We had no model weights.
 
-## Contents
+To run the run_inference() just go to the command line and write out python run_inference.py. Note that data set that the model is run on should be called private.jsonl and be in the data folder. When it is done, it will create a .csv file called final_results.csv in the results folder. Before running the file, make sure to be using the .venv environment from the starter code. 
 
-| File | Description |
-|---|---|
-| `starter_code_cse151b_comp.ipynb` | Main entry point |
-| `judger.py` | Response scoring logic |
-| `utils.py` | Utilities used by `judger.py` |
-| `data/public.jsonl` | Public dataset with ground-truth answers |
-| `results/` | Output JSONL files written at runtime |
+NOTE: In the submissions made to the Kaggle, we forgot to include the is_mcq column when submitting our .csvs. Only realized this mistake while making the run_inference.py file but that is fixed in it. We do not know if that will increase the accuracy or not since we could not generate another .csv in the time we had left. 
